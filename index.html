@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ResumableJS Test</title>
+</head>
+<body>
+<form id="form" enctype="multipart/form-data">
+  <fieldset>
+    <label>
+      URL<br>
+      <input type="text" name="url" value="http://localhost:8080/">
+    </label>
+    <br>
+<!--    <label>-->
+<!--      Bearer token <br>-->
+<!--      <input type="text" name="token" placeholder="without 'Bearer' prefix">-->
+<!--    </label>-->
+<!--  <br>-->
+    <label>
+      Chunk size, mb <br>
+      <input type="number" name="chunkSize" placeholder="MB" value="5">
+    </label>
+  <br>
+    <label>
+      Test chunks <br>
+      <input type="checkbox" name="testChunks" value="0">
+    </label>
+  <br>
+    <label>
+      Video file <br>
+      <input type="file" name="file" accept="video/*" id="file">
+    </label>
+  <br><br>
+  <input type="submit" value="Upload!">
+  </fieldset>
+  <button id="pause">Pause</button>
+  <button id="stop">Stop</button>
+  <button id="resume">Resume</button>
+  <p>Progress: <span id="progress">0</span>/100</p>
+</form>
+<textarea readonly rows="100" cols="100" id="log">Log will be here</textarea>
+<script src="./upload.js"></script>
+</body>
+</html>
