@@ -1,4 +1,5 @@
 import Resumable from 'resumablejs'
+import { v4 as uuidv4 } from 'uuid';
 
 let r
 
@@ -35,6 +36,9 @@ function sendFile(e) {
     },
     testChunks: form.testChunks.checked,
     chunkSize: form.chunkSize.value * 1024 * 1024,
+    generateUniqueIdentifier: f => {
+      return `${ f.size }-${ uuidv4() }`;
+    },
   })
 
   r.addFile(document.getElementById('file').files[0])
