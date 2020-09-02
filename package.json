@@ -5,6 +5,9 @@
   "author": "Konstantin Matrokhin <remillary@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "parcel build index.html --public-url ./"
+  },
   "dependencies": {
     "resumablejs": "remillary/resumable.js",
     "uuid": "^8.3.0"

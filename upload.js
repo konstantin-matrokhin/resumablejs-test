@@ -1,4 +1,4 @@
-import 'resumablejs'
+import Resumable from 'resumablejs'
 
 let r
 
@@ -35,7 +35,6 @@ function sendFile(e) {
     },
     testChunks: form.testChunks.checked,
     chunkSize: form.chunkSize.value * 1024 * 1024,
-    method: 'octet',
   })
 
   r.addFile(document.getElementById('file').files[0])
